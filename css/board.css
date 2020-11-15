@@ -1,0 +1,52 @@
+#title_area {
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    border-bottom: 4px solid gray;
+    max-width: 75%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#contents_top_area {
+    background-color: green;
+    width: 75%;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#table_area {
+    background-color: greenyellow;
+    width: 75%;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#th_no {
+    width: 100px;
+}
+
+#th_title {
+    width: 500px;
+}
+
+#th_writer {
+    width: 200px;
+}
+
+#th_date {
+    width: 200px;
+}
+
+#th_num {
+    width: 50px;
+}
+
+#th_etc {
+    width: 50px;
+}
