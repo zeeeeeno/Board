@@ -10,43 +10,62 @@
     margin-left: auto;
 }
 
+#body_area {
+    float: left;
+    display: flex;
+}
+
+#menu_area {
+    background-color: indianred;
+    width: 120px;
+    height: 400px;
+}
+
 #contents_top_area {
     background-color: green;
-    width: 75%;
-    line-height: 20px;
-    margin-top: 10px;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
 
+#top_right {
+    float: right;
+}
+
 #table_area {
-    background-color: greenyellow;
-    width: 75%;
-    margin-top: 100px;
+    background-color: gray;
+    width: 90%;
+    margin-top: 60px;
     margin-right: auto;
     margin-left: auto;
 }
 
 #th_no {
     width: 100px;
+    height: 40px;
 }
 
 #th_title {
     width: 500px;
+    height: 40px;
 }
 
 #th_writer {
     width: 200px;
+    height: 40px;
 }
 
 #th_date {
     width: 200px;
+    height: 40px;
 }
 
 #th_num {
-    width: 50px;
+    width: 80px;
+    height: 40px;
 }
 
 #th_etc {
     width: 50px;
+    height: 40px;
 }
