@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Board</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/board.css">
+        <link rel="stylesheet" type="text/css" href="css/boardCreate.css">
+        <script type="text/javascript" src="createBoard.js"></script>
+    </head>
+    <body>
+        <div id="title_area">
+            <h1>게시판</h1>
+        </div>
+        <div id="body_area">
+            <div id="contents_create_area">
+                <form action="#" class="editor__form" id="editor-form">
+                    <div id="write_writer">
+                        <p>작성자</p>
+                        <input
+                        type="text"
+                        class="editor__title-input"
+                        id="editor-title-input"
+                        placeholder="작성자"
+                        />
+                    </div>
+                    <div id="write_title">
+                        <p>제목</p>
+                        <input
+                        type="text"
+                        class="editor__title-input"
+                        id="editor-title-input"
+                        placeholder="제목"
+                        />
+                    </div>
+                    <div id="write_contents">
+                        <p>내용</p>
+                        <input
+                        type="text"
+                        class="editor__content-input"
+                        id="editor-content-input"
+                        placeholder="내용"
+                        size="80"
+                      />
+                    </div>
+                </form>
+                <div id="btn_area">
+                    <button>
+                        <a href="Board.html">Cancel</a>
+                    </button>                 
+                    <button class="editor__btn" id="editor-submit-btn">
+                        <a href="Board.html">Register</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -3,46 +3,35 @@
         <title>Board</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
+        <script type="text/javascript" src="createBoard.js"></script>
     </head>
     <body>
         <div id="title_area">
             <h1>게시판</h1>
         </div>
         <div id="body_area">
-            <div id="menu_area">
-                <div id="menu_title">
-                    <h3>GSITM</h3>
-                </div>
-                <div id="menu_contents">
-                    <h5>전사공지</h5>
-                    <h5>전사공지</h5>
-                    <h5>전사공지</h5>
-                    <h5>전사공지</h5>
-                </div>
-            </div>
             <div id="contents_area">
                 <div id="contents_top_area">
-                    <div style="float: left;">
-                        <p>전체 게시글</p>
-                    </div>
-                    <div id="top_right">
-                        <input type="button" value="검색"/>
-                        <input type="text" />
-                    </div>
+                    <p>전체 게시글</p>
                 </div>
-                <div id="table_area">
-                    <table border="1" id="table">
-                        <thead>
-                            <th id="th_no">번호</th>
-                            <th id="th_title">제목</th>
-                            <th id="th_writer">작성자</th>
-                            <th id="th_date">작성일</th>
-                            <th id="th_num">조회수</th>
-                            <th id="th_etc">비고</th>
+                <div class="board__container" id="div_table_area">
+                    <table class="board__table-head" border="1" id="table_area">
+                        <thead class="board__titles" id="thead_area">
+                            <th class="board__column">번호</th>
+                            <th class="board__column">제목</th>
+                            <th class="board__column">작성자</th>
+                            <th class="board__column">작성일</th>
+                            <th class="board__column">조회수</th>
                         </thead>
-                        <tbody>
-                        </tbody>
+                        <tbody class="board__contents" id="board-body"></tbody>
                     </table>
+                    <div class="board__index-container" id="index-container"></div>
+                </div>
+                <div id="bottom_area">
+                    <div id="pagenation_area"></div>
+                    <div id="btn_area">
+                        <a href="CreateBoard.html">Create Register</a>
+                    </div>
                 </div>
             </div>
         </div>
