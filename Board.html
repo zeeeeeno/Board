@@ -3,37 +3,54 @@
         <title>Board</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
-        <script type="text/javascript" src="createBoard.js"></script>
     </head>
     <body>
         <div id="title_area">
-            <h1>게시판</h1>
+            <h1>국비지원</h1>
         </div>
         <div id="body_area">
+            <div id="menu_area">
+                <ul>
+                    <li style="margin-bottom: 10px;"><a style="font-size: small;">전체공지</a></li>
+                    <li style="margin-bottom: 10px;"><a href="BitCamp.html" style="font-size: small;">비트캠프</a></li>
+                    <li style="margin-bottom: 10px;"><a style="font-size: small;">멀티캠퍼스</a></li>
+                    <li style="margin-bottom: 10px;"><a style="font-size: small;">쌍용IT</a></li>
+                    <li style="margin-bottom: 10px;"><a style="font-size: small;">GSIT</a></li>
+                </ul>
+            </div>
             <div id="contents_area">
-                <div id="contents_top_area">
-                    <p>전체 게시글</p>
-                </div>
-                <div class="board__container" id="div_table_area">
-                    <table class="board__table-head" border="1" id="table_area">
-                        <thead class="board__titles" id="thead_area">
-                            <th class="board__column">번호</th>
-                            <th class="board__column">제목</th>
-                            <th class="board__column">작성자</th>
-                            <th class="board__column">작성일</th>
-                            <th class="board__column">조회수</th>
-                        </thead>
-                        <tbody class="board__contents" id="board-body"></tbody>
-                    </table>
-                    <div class="board__index-container" id="index-container"></div>
-                </div>
-                <div id="bottom_area">
-                    <div id="pagenation_area"></div>
-                    <div id="btn_area">
-                        <a href="CreateBoard.html">Create Register</a>
+                <div id="contents_area">
+                    <div id="contents_top_area">
+                        <h5 style="margin: 0px;">전체 게시글: 
+                            <script>
+                                const storageSize = localStorage.length;
+                                document.write(storageSize)
+                            </script>
+                        </h5>
+                    </div>
+                    <div class="board__container" id="div_table_area">
+                        <table class="board__table-head" border="1" id="table_area">
+                            <thead class="board__titles" id="thead_area">
+                                <tr class="board__titles">
+                                    <th class="board__column">번호</th>
+                                    <th class="board__column">제목</th>
+                                    <th class="board__column">작성자</th>
+                                    <th class="board__column">작성일</th>
+                                    <th class="board__column">조회</th>
+                                </tr>
+                            </thead>
+                            <tbody class="board__contents" id="board-body"></tbody>
+                        </table>
+                        <div class="board__index-container" id="index-container"></div>
+                    </div>
+                    <div id="bottom_area">
+                        <div id="btn_area">
+                            <a href="CreateBoard.html">Create Register</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="loadBoard.js"></script>
     </body>
 </html>

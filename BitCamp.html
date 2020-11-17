@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitCamp Board</title>
+    <link rel="stylesheet" type="text/css" href="css/board.css">
+</head>
+<body>
+    <div id="title_area">
+        <h1>비트캠프</h1>
+    </div>
+    <div id="body_area">
+        <div id="menu_area">
+            <ul>
+                <li style="margin-bottom: 10px;"><a style="font-size: small;">전체공지</a></li>
+                <li style="margin-bottom: 10px;"><a href="BitCamp.html" style="font-size: small;">비트캠프</a></li>
+                <li style="margin-bottom: 10px;"><a style="font-size: small;">멀티캠퍼스</a></li>
+                <li style="margin-bottom: 10px;"><a style="font-size: small;">쌍용IT</a></li>
+                <li style="margin-bottom: 10px;"><a style="font-size: small;">GSIT</a></li>
+            </ul>
+        </div>
+        <div id="contents_area">
+            <div id="contents_area">
+                <div id="contents_top_area">
+                    <h5 style="margin: 0px;">전체 게시글: 
+                        <script>
+                            const storageSize = localStorage.length;
+                            document.write(storageSize)
+                        </script>
+                    </h5>
+                </div>
+                <div class="board__container" id="div_table_area">
+                    <table class="board__table-head" border="1" id="table_area">
+                        <thead class="board__titles" id="thead_area">
+                            <tr class="board__titles">
+                                <th class="board__column">번호</th>
+                                <th class="board__column">제목</th>
+                                <th class="board__column">작성자</th>
+                                <th class="board__column">작성일</th>
+                                <th class="board__column">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody class="board__contents" id="board-body"></tbody>
+                    </table>
+                    <div class="board__index-container" id="index-container"></div>
+                </div>
+                <div id="bottom_area">
+                    <div id="btn_area">
+                        <a href="CreateBoard.html">Create Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="loadBoard.js"></script>
+</body>
+</html>

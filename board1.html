@@ -211,6 +211,7 @@
       let date = new Date();
       let views = Math.floor(Math.random() * 99) + 1;
 
+      // 제목 눌렀을 때
       function onTitleClick(e) {
         contentsContainer.textContent = '';
         const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));

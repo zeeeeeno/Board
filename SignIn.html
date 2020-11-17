@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <img src="/img/logo_gsitm.jpg" width=200/>
+            </div>
+
+            <div class="middle">
+                <div class="middle-left"> 
+                    <div style="height: 100%; width: 100%;">
+                        <form id="login-form">
+                            <div style="width: 100%; line-height: 100px;">
+                                <h1>Login</h1>
+                            </div>
+                            <div style="width: 100%; line-height: 80px;">
+                                <i class="fa fa-user-circle" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="userId_login" name="username" type="text" placeholder="아이디"/>
+                            </div>
+                            <div style="width: 100%; line-height: 80px;">
+                                <i class="fa fa-unlock-alt" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="password_login" name="password" type="password" placeholder="비밀번호"/>
+                            </div>
+                            <div style="width: 100%; line-height: 100px;">
+                                <button type="submit_login" class="button button1" onclick="logIn()">Login</button>
+                            </div>
+                        </from>
+                    </div>
+
+                <div class="middle-right">
+                    <div style="height: 100%; width: 100%;">
+                        <form id="login-form">
+                            <div style="width: 100%; line-height: 100px;">
+                                <h1>회원가입</h1>
+                            </div>
+                            <div style="width: 100%; line-height: 50px;">
+                                <i class="fa fa-user" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="username_signIn" name="username" type="text" placeholder="이름"/>
+                            </div>
+                            <div style="width: 100%; line-height: 40px;">
+                                <i class="fa fa-user-circle" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="userId_signIn" name="username" type="text" placeholder="아이디"/>
+                            </div>
+                            <div style="width: 100%; line-height: 40px;">
+                                <i class="fa fa-unlock-alt" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="password_signIn" name="password" type="password" placeholder="비밀번호"/>
+                            </div>
+                            <div style="width: 100%; line-height: 40px;">
+                                <i class="fa fa-unlock-alt" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
+                                <input id="passwordCert_signIn" name="passwordCert" type="password" placeholder="비밀번호 확인"/>
+                            </div>
+                            <div style="width: 100%; line-height: 80px;">
+                                <button type="submit" class="button button2" onclick="signIn()">회원가입</button>
+                            </div>
+                        </from>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="SignIn.js"></script>
+        <script type="text/javascript" src="Login.js"></script>
+    </body>
+</html>
