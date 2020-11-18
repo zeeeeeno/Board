@@ -6,30 +6,31 @@
     </head>
     <body>
         <div id="title_area">
-            <h1>국비지원</h1>
+            <h1 id="title_text">국비지원</h1>
         </div>
         <div id="body_area">
             <div id="menu_area">
                 <ul>
-                    <li style="margin-bottom: 10px;"><a style="font-size: small;">전체공지</a></li>
-                    <li style="margin-bottom: 10px;"><a href="BitCamp.html" style="font-size: small;">비트캠프</a></li>
-                    <li style="margin-bottom: 10px;"><a style="font-size: small;">멀티캠퍼스</a></li>
-                    <li style="margin-bottom: 10px;"><a style="font-size: small;">쌍용IT</a></li>
-                    <li style="margin-bottom: 10px;"><a style="font-size: small;">GSIT</a></li>
+                    <li><a href="Board.html">전체공지</a></li>
+                    <li><a href="BitCamp.html">비트캠프</a></li>
+                    <li><a>멀티캠퍼스</a></li>
+                    <li><a>쌍용IT</a></li>
+                    <li><a>GSIT</a></li>
                 </ul>
             </div>
+            <div style="width: 3px; height: 400px; float: left; background-color: gray; margin-left: 15px;"></div>
             <div id="contents_area">
                 <div id="contents_area">
                     <div id="contents_top_area">
                         <h5 style="margin: 0px;">전체 게시글: 
                             <script>
-                                const storageSize = localStorage.length;
-                                document.write(storageSize)
+                                const lists = JSON.parse(localStorage.getItem('boardLists'));
+                                document.write(lists.length)
                             </script>
                         </h5>
                     </div>
                     <div class="board__container" id="div_table_area">
-                        <table class="board__table-head" border="1" id="table_area">
+                        <table class="board__table-head" id="table_area">
                             <thead class="board__titles" id="thead_area">
                                 <tr class="board__titles">
                                     <th class="board__column">번호</th>
@@ -51,6 +52,6 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="loadBoard.js"></script>
     </body>
+    <script type="text/javascript" src="loadBoard.js"></script>
 </html>

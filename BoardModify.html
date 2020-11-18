@@ -3,7 +3,7 @@
         <title>Board</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
-        <link rel="stylesheet" type="text/css" href="css/boardCreate.css">
+        <link rel="stylesheet" type="text/css" href="css/boardUpdate.css">
     </head>
     <body>
         <div id="title_area">
@@ -19,19 +19,19 @@
         <div id="menu_right_bar"></div>
         <div id="body_area">
             <div class="editor__container" id="contents_create_area">
-                <form action="#" class="editor__form" id="editor-form">
+                <form action="#" class="editor__form" id="upd_editor-form">
                     <div id="input_top_area">
                         <div id="writer_area">
                             <label>작성자: </label>
                             <input
                                 type="text"
-                                class="editor__writer-input"
-                                id="editor-writer-input"
+                                class="upd_editor__writer-input"
+                                id="upd_editor-writer-input"
                                 placeholder="작성자"
                                 size=20
                             />                    
                         </div>
-                        <div id="cate_area">
+                        <div id="upd_cate_area">
                             <label>카테고리: </label>
                             <select id="hz">
                                 <option>비트캠프</option>
@@ -40,39 +40,33 @@
                             </select>
                         </div>
                     </div>
-                    <div id="title_intput_area">
+                    <div id="upd_title_intput_area">
                         <h4 style="margin-bottom: 10px;">제목</h4>
                         <input
                             type="text"
-                            class="editor__title-input"
-                            id="editor-title-input"
+                            class="upd_editor__title-input"
+                            id="upd_editor-title-input"
                             placeholder="제목"
                         />                    
                     </div>
-                    <div id="contents_input_area">
+                    <div id="upd_contents_input_area">
                         <h4 style="margin-bottom: 10px;">내용</h4>
                         <input
                         type="textarea"
-                        class="editor__content-input"
-                        id="editor-content-input"
+                        class="upd_editor__content-input"
+                        id="upd_editor-content-input"
                         placeholder="내용"
                         size="80"
                         />
                     </div>
-                    <div id="btn_area">
-                        <button type="submit_modify" class="button button1" onclick="gotoHome()">취소</button>
-                        <button type="submit_delete" class="button button2" onclick="boardDelete()">등록</button>
-                        <!-- <button type="button">
-                            <a href="Board.html">취소</a>
-                        </button>
-                        <button class="editor__btn" id="editor-submit-btn">
-                            <a>등록</a>
-                        </button> -->
+                    <div id="upd_btn_area">
+                        <button type="button" class="button button1" onclick="gotoHome()">취소</button>
+                        <button type="button" class="button button2" onclick="updateBoard()">수정</button>
                     </div>
                 </form>
             </div>
         </div>
-        <script type="text/javascript" src="createBoard.js"></script>
+        <script type="text/javascript" src="updateBoard.js"></script>
         <script type="text/javascript" src="router.js"></script>
     </body>
 </html>

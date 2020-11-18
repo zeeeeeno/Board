@@ -30,7 +30,8 @@ function signIn() {
 
             localStorage.setItem(id, JSON.stringify(objArr));
 
-            alert('회원가입 성공')
+            alert('회원가입 성공');
+            
         } else {
             lists.push({
                 userId: `${userId}`,
@@ -50,5 +51,5 @@ function signIn() {
     userId.value = '';
     userId.value = '';
 
-    window.location.reload();
+    // window.location.reload();
 }

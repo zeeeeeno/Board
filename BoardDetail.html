@@ -1,12 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Detail Page</title>
-</head>
-<body>
-    <div class="contents__container"></div>
-    <script type="text/javascript" src="createBoard.js"></script>
-</body>
+<html>
+    <head>
+        <title>Board Detail</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/board.css">
+        <link rel="stylesheet" type="text/css" href="css/boardDetail.css">
+    </head>
+    <body>
+        <div id="title_area">
+            <h1>국비지원</h1>
+        </div>
+        <div id="body_area">
+            <div id="menu_area">
+                <ul>
+                    <li><a href="Board.html">전체공지</a></li>
+                    <li><a href="BitCamp.html">비트캠프</a></li>
+                    <li><a>멀티캠퍼스</a></li>
+                    <li><a>쌍용IT</a></li>
+                    <li><a>GSIT</a></li>
+                </ul>
+            </div>
+            <div style="width: 3px; height: 400px; float: left; background-color: gray; margin-left: 15px;"></div>
+            <div class="detail_board" id="detail_board"></div>
+            <div class="detail_board_contents_area" id="detail_board_contents_area">
+                <div>
+                    <h4 class="contents_p_area" style="margin-top: 30px;">내용</h4>
+                </div>
+                <div class="detail_contents_info" id="detail_contents_info"></div>
+            </div>
+            <div id="detail_board_btn_area">
+                <div id="update_delete_btn">
+                    <button type="submit_modify" class="button button1" onclick="gotoModify()">수정하기</button>
+                    <button type="submit_delete" class="button button2" onclick="boardDelete()">삭제하기</button>
+                </div>
+                <div id="goto_contetns">
+                    <button type="submit_delete" class="button button3" onclick="gotoContents()">목록</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="loadBoardDetail.js"></script>
+        <script type="text/javascript" src="router.js"></script>
+    </body>
 </html>

@@ -2,29 +2,48 @@
     text-align: center;
     line-height: 50px;
     vertical-align: middle;
-    border-bottom: 4px solid gray;
-    max-width: 70%;
+    border-bottom: 3px solid gray;
+    max-width: 90%;
     margin-top: 30px;
     margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
 }
 
+#title_text{
+    color: rgb(110, 110, 110);
+}
+
+#load_table{
+
+}
+
+#menu_right_bar{
+    width: 3px; 
+    height: 400px; 
+    float: left; 
+    background-color: gray; 
+    margin-left: 15px;
+}
+
 #menu_area {
-    background: rgb(185, 185, 185);
-    width: 170px;
+    width: 130px;
     height: 400px;
     float: left;
+    background-color: rgb(230, 230, 230);
 }
 
-#ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+ul {
+    margin-left: 15px;
+    padding: 10px;
 }
 
-#li{
-    margin-bottom: 5px;
+li {
+    margin-bottom: 10px;
+}
+
+a{
+    font-size: small;
 }
 
 #body_area{
@@ -46,11 +65,18 @@
 }
 
 #table_area {
+    text-align: center; 
+    margin-bottom: 20px; 
     width: 100%;
+    border-top: 2px solid rgb(110, 110, 110);
+    border-bottom: 2px solid rgb(110, 110, 110);
+    padding: 0px;
+    border-collapse: collapse;
 }
 
 #thead_area {
     background-color: rgb(172, 166, 166);
+    border-bottom: 2px solid rgb(110, 110, 110);
 }
 
 #bottom_area {
@@ -60,4 +86,23 @@
 #btn_area{
     float: right;
     margin-right: 30px;
+}
+
+.board__index-container {
+    bottom: 10px;
+    text-align: center;
+  }
+
+.board__index-link {
+    all: unset;
+    margin-right: 5px;
+}
+
+.board__index-link:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+#board__content {
+    height: 30px;
 }

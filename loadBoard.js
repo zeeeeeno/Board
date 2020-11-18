@@ -1,63 +1,30 @@
 const boardTableBody = document.querySelector('#board-body');
-const contentsContainer = document.querySelector('.contents__container');
-
-const BOARDLIST_LS = 'boardLists';
-const boardListsObj = [];
-let nums = 0;
-let date = new Date();
-let views = 0;
+const BOARDinputLIST_LS = 'boardLists';
+let contentsNum = 0;
 
 function onTitleClick(e) {
-    contentsContainer.textContent = '';
-    const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
+    let lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
     const index = e.target.parentNode.id.replace(/[a-z|-]/gi, '');
+    
+    contentsNum = index;
+    var clickBoardNum = "clickBoardNum"
 
-    const contentsTitles = document.createElement('div');
-    contentsTitles.classList.add('contents__titles');
+    // 조회수 올리기
+    var legacyIdx = Number(lists[contentsNum].views);
+    var chIdx = legacyIdx + 1;
 
-    const contentsColumnFirst = document.createElement('div');
-    contentsColumnFirst.classList.add('contents__column');
+    lists[contentsNum].views = chIdx;
 
-    const contentsTitle = document.createElement('div');
-    contentsTitle.classList.add('contents__title');
-    contentsTitle.textContent = lists[index].title;
+    localStorage.setItem(BOARDinputLIST_LS, JSON.stringify(lists));
 
-    // contents__titles > column >author, date, views
-    const contentsColumnSecond = document.createElement('div');
-    contentsColumnSecond.classList.add('contents__column');
+    localStorage.setItem(clickBoardNum, contentsNum);
 
-    const contentsAuthor = document.createElement('div');
-    contentsAuthor.classList.add('contents__author');
-    contentsAuthor.textContent = lists[index].author;
+    window.location.href = 'http://localhost:5500/BoardDetail.html';
 
-    const contentsDate = document.createElement('div');
-    contentsDate.classList.add('contents__date');
-    contentsDate.textContent = lists[index].date;
-
-    const contentsViews = document.createElement('div');
-    contentsViews.classList.add('contents__views');
-    contentsViews.textContent = lists[index].views;
-
-    const contentsContent = document.createElement('div');
-    contentsContent.classList.add('contents__content');
-    contentsContent.textContent = lists[index].content;
-
-    contentsColumnFirst.appendChild(contentsTitle);
-
-    contentsColumnSecond.appendChild(contentsAuthor);
-    contentsColumnSecond.appendChild(contentsDate);
-    contentsColumnSecond.appendChild(contentsViews);
-
-    contentsTitles.appendChild(contentsColumnFirst);
-    contentsTitles.appendChild(contentsColumnSecond);
-
-    contentsContainer.appendChild(contentsTitles);
-    contentsContainer.appendChild(contentsContent);
 }
 
 function emptyCheck() {
-    console.log('empty check')
-    const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));
+    const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
 
     if(!lists) {
         console.log('nums: ' + nums)
@@ -79,7 +46,7 @@ function emptyCheck() {
 }
 
 function assignIndex() {
-    const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));
+    const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
     if (!lists) {
         nums = 0;
     } else {
@@ -88,13 +55,14 @@ function assignIndex() {
 }
 
 function showBoardLists() {
-    console.log('show board lists')
-    const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));
-    
+    const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
+
     lists.forEach((list, index) => {
         if (index < 5) {
             const tr = document.createElement('tr');
             tr.classList.add('board__content');
+            tr.style.height = '50px';
+            tr.style.borderBottom = '1px solid gray';
 
             const tdNum = document.createElement('td');
             tdNum.classList.add('board__content-column');
@@ -132,7 +100,9 @@ function showBoardLists() {
             const linkToContent = document.querySelector(
                 `#link-to-content${index}`
             );
+
             linkToContent.addEventListener('click', onTitleClick);
+
         } else if (index === 5) {
             const boardIndexMax = Math.ceil(lists.length / 5);
             for (let i = 0; i < boardIndexMax; i++) {
@@ -158,13 +128,15 @@ function showBoardLists() {
 
 function showBoardListsNewPage(pageIndex) {
     boardTableBody.textContent = '';
-    const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));
+    const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
     const limitPage = pageIndex * 5;
 
     lists.forEach((list, index) => {
         if (index >= limitPage && index < limitPage + 5) {
-            const tr = document.createElement('tr');
+                        const tr = document.createElement('tr');
             tr.classList.add('board__content');
+            tr.style.height = '50px';
+            tr.style.borderBottom = '1px solid gray';
 
             const tdNum = document.createElement('td');
             tdNum.classList.add('board__content-column');
@@ -202,6 +174,7 @@ function showBoardListsNewPage(pageIndex) {
             const linkToContent = document.querySelector(
                 `#link-to-content${index}`
             );
+
             linkToContent.addEventListener('click', onTitleClick);
         }
     });

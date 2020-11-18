@@ -2,6 +2,8 @@ const userId_Login = document.querySelector('#userId_login');
 const userPassword_Login = document.querySelector('#password_login');
 
 function logIn() {
+    console.log('login()')
+
     const id = userId_Login.value;
     const password = userPassword_Login.value;
 
@@ -17,10 +19,8 @@ function logIn() {
         console.log('id 존재')
         if (pw_splice === password) {
             alert('login success !!');
-            console.log('로그인 성공')
-            window.location.reload();
-            saveInfo(storage_ID)
-            window.location.replace("/Board.html");
+
+            location.replace("http://localhost:5500/Board.html");
         } else {
             alert('비밀번호가 일치하지 않습니다.')
         }
