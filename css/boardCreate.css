@@ -1,9 +1,9 @@
 #contents_create_area {
     width: 60vw;
-    height: 60vh;
+    height: 55vh;
     border: 3px solid gray;
     border-radius: 2em;
-    margin: auto;
+    margin-left: 330px;
     padding: 30px;
 }
 
@@ -29,7 +29,8 @@
 }
 
 #btn_area{
-    margin-right: 350px;
+    width: fit-content;
+    margin: 0px auto;
 }
 
 #editor-title-input{

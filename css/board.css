@@ -5,7 +5,7 @@
     border-bottom: 3px solid gray;
     max-width: 90%;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -14,21 +14,17 @@
     color: rgb(110, 110, 110);
 }
 
-#load_table{
-
-}
-
 #menu_right_bar{
     width: 3px; 
-    height: 400px; 
+    height: 450px; 
     float: left; 
     background-color: gray; 
     margin-left: 15px;
 }
 
 #menu_area {
-    width: 130px;
-    height: 400px;
+    width: 160px;
+    height: 450px;
     float: left;
     background-color: rgb(230, 230, 230);
 }
@@ -51,17 +47,20 @@ a{
 }
 
 #contents_area{
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 
 #contents_top_area{
     width: auto;
     margin-bottom: 10px;
+    margin-left: 70px;
 }
 
 #div_table_area {
     width: 100%;
+    background-color: aquamarine;
+    margin-left: 70px;
 }
 
 #table_area {
@@ -79,13 +78,17 @@ a{
     border-bottom: 2px solid rgb(110, 110, 110);
 }
 
-#bottom_area {
-    background-color: blue;
+.board__titles {
+    height: 40px;
 }
 
-#btn_area{
+#bottom_area {
     float: right;
     margin-right: 30px;
+}
+
+#create_register{
+    font-size: large;
 }
 
 .board__index-container {

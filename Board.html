@@ -18,16 +18,16 @@
                     <li><a>GSIT</a></li>
                 </ul>
             </div>
-            <div style="width: 3px; height: 400px; float: left; background-color: gray; margin-left: 15px;"></div>
+            <div id="menu_right_bar"></div>
             <div id="contents_area">
                 <div id="contents_area">
                     <div id="contents_top_area">
-                        <h5 style="margin: 0px;">전체 게시글: 
+                        <h4 style="margin: 0px;">전체 게시글: 
                             <script>
                                 const lists = JSON.parse(localStorage.getItem('boardLists'));
                                 document.write(lists.length)
                             </script>
-                        </h5>
+                        </h4>
                     </div>
                     <div class="board__container" id="div_table_area">
                         <table class="board__table-head" id="table_area">
@@ -44,10 +44,10 @@
                         </table>
                         <div class="board__index-container" id="index-container"></div>
                     </div>
-                    <div id="bottom_area">
-                        <div id="btn_area">
-                            <a href="CreateBoard.html">Create Register</a>
-                        </div>
+                </div>
+                <div id="bottom_area">
+                    <div id="btn_area">
+                        <a href="CreateBoard.html" id="create_register">Create Register</a>
                     </div>
                 </div>
             </div>

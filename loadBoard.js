@@ -55,6 +55,7 @@ function assignIndex() {
 }
 
 function showBoardLists() {
+    console.log('showBoardLists()')
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
 
     lists.forEach((list, index) => {
