@@ -1,11 +1,11 @@
 #title_area {
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
     vertical-align: middle;
     border-bottom: 3px solid gray;
     max-width: 90%;
-    margin-top: 30px;
-    margin-bottom: 70px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -16,7 +16,7 @@
 
 #menu_right_bar{
     width: 3px; 
-    height: 450px; 
+    height: 350px; 
     float: left; 
     background-color: gray; 
     margin-left: 15px;
@@ -24,17 +24,21 @@
 
 #menu_area {
     width: 160px;
-    height: 450px;
+    height: 350px;
     float: left;
     background-color: rgb(230, 230, 230);
 }
 
-ul {
+#board_menu_a {
+    color: gray;
+}
+
+#board_ul {
     margin-left: 15px;
     padding: 10px;
 }
 
-li {
+#board_li {
     margin-bottom: 10px;
 }
 
@@ -59,7 +63,6 @@ a{
 
 #div_table_area {
     width: 100%;
-    background-color: aquamarine;
     margin-left: 70px;
 }
 
@@ -109,3 +112,4 @@ a{
 #board__content {
     height: 30px;
 }
+

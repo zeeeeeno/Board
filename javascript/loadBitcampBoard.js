@@ -58,7 +58,15 @@ function showBoardLists() {
     console.log('showBoardLists()')
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
 
-    lists.forEach((list, index) => {
+    const newLists = [];
+
+    lists.forEach(list => {
+        if (list.category === "비트캠프") {
+            newLists.push(list)
+        }
+    })
+
+    newLists.forEach((list, index) => {
         if (index < 5) {
             const tr = document.createElement('tr');
             tr.classList.add('board__content');
@@ -76,6 +84,7 @@ function showBoardLists() {
             const tdTitle = document.createElement('td');
             tdTitle.classList.add('board__content-column');
             tdTitle.textContent = list.title;
+            tdTitle.style.paddingTop = "15px"
 
             aTitle.appendChild(tdTitle);
 
@@ -87,6 +96,10 @@ function showBoardLists() {
             tdDate.classList.add('board__content-column');
             tdDate.textContent = list.date;
 
+            const tdCategory = document.createElement('td');
+            tdCategory.classList.add('board__content-column');
+            tdCategory.textContent = list.category;
+
             const tdViews = document.createElement('td');
             tdViews.classList.add('board__content-column');
             tdViews.textContent = list.views;
@@ -95,6 +108,7 @@ function showBoardLists() {
             tr.appendChild(aTitle);
             tr.appendChild(tdAuthor);
             tr.appendChild(tdDate);
+            tr.appendChild(tdCategory);
             tr.appendChild(tdViews);
 
             boardTableBody.appendChild(tr);
@@ -132,7 +146,15 @@ function showBoardListsNewPage(pageIndex) {
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
     const limitPage = pageIndex * 5;
 
+    const newLists = [];
+
     lists.forEach((list, index) => {
+        if (list.category === "비트캠프") {
+            newLists.push(list)
+        }
+    })
+    
+    newLists.forEach((list, index) => {
         if (index >= limitPage && index < limitPage + 5) {
                         const tr = document.createElement('tr');
             tr.classList.add('board__content');
@@ -150,6 +172,7 @@ function showBoardListsNewPage(pageIndex) {
             const tdTitle = document.createElement('td');
             tdTitle.classList.add('board__content-column');
             tdTitle.textContent = list.title;
+            tdTitle.style.paddingTop = "15px"
 
             aTitle.appendChild(tdTitle);
 
@@ -161,6 +184,10 @@ function showBoardListsNewPage(pageIndex) {
             tdDate.classList.add('board__content-column');
             tdDate.textContent = list.date;
 
+            const tdCategory = document.createElement('td');
+            tdCategory.classList.add('board__content-column');
+            tdCategory.textContent = list.category;
+
             const tdViews = document.createElement('td');
             tdViews.classList.add('board__content-column');
             tdViews.textContent = list.views;
@@ -169,6 +196,7 @@ function showBoardListsNewPage(pageIndex) {
             tr.appendChild(aTitle);
             tr.appendChild(tdAuthor);
             tr.appendChild(tdDate);
+            tr.appendChild(tdCategory);
             tr.appendChild(tdViews);
 
             boardTableBody.appendChild(tr);

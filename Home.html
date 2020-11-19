@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111;
-        }
-    </style>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
-<body>
-    <div>
-        <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">Community</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+<body style="margin: 0;">
+    <div id="top_area">
+        <div id="top_menu_area">
+            <ul id="home_ul">
+                <li id="home_li"><a class="active" href="#home">Home</a></li>
+                <li id="home_li"><a href="Board.html">Board</a></li>
+                <a id="logout_btn" onclick="logout()">로그아웃</a>
+            </ul>
+        </div>
+        <div id="search_area">
+            <div id="search_input_btn_area">
+                <input id="search_input" type="text" placeholder="검색어를 입력하세요." />
+                <button id="search_btn">검색</button>
+            </div>  
+        </div>
     </div>
-    <div style="width: 100%; height: 70px; border: 1px solid gray;">
-        <div style="width: 80%;">
-            <input type="text" placeholder="검색어를 입력하세요." style="font-size: 16px; width: 325px; padding:10px; border: 0px; float: left;" />
-            <button style="width: 50px; height: 50px; border: 0px; background-color: #1b5ac2; float: right; outline: none; ">검색</button>
-        </div>  
+    <div id="introduce_academy">
+        <div id="title_academy">
+            <h2 style="margin: 0; margin-top: 10px;">오늘의 추천</h2>
+        </div>
+        <div id="contents_academy">
+            <div id="intro_left_area">
+                <div>
+                    <img id="bitcamp_img" src="/img/bitcamp.PNG" onclick="gotoBitcampUrl()">
+                </div>
+                <div style="margin-top: 30px;">
+                    <div style="float: left; margin-right: 50px;">
+                        <img id="bitcamp_img2" src="/img/bitcamp2.PNG" onclick="gotoBitcampUrl2()">
+                    </div>
+                    <div>
+                        <img id="bitcamp_img3" src="/img/bitcamp3.PNG" onclick="gotoBitcampUrl3()">
+                    </div>
+                </div>
+            </div>
+            <div id="intro_right_academy">
+                <img id="bitcamp_img1" src="/img/bitcamp1.PNG" onclick="gotoBitcampUrl1()">
+            </div>
+        </div>
     </div>
 </body>
+<script type="text/javascript" src="/javascript/router.js"></script>
 </html>

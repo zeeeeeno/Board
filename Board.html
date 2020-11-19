@@ -3,19 +3,26 @@
         <title>Board</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </head>
-    <body>
+    <body style="margin: 0;">
+        <div id="top_menu_area">
+            <ul id="home_ul">
+                <li id="home_li"><a class="active" href="Home.html">Home</a></li>
+                <li id="home_li"><a href="Board.html">Board</a></li>
+                <a id="logout_btn" onclick="logout()">로그아웃</a>
+            </ul>
+        </div>
         <div id="title_area">
             <h1 id="title_text">국비지원</h1>
         </div>
         <div id="body_area">
             <div id="menu_area">
-                <ul>
-                    <li><a href="Board.html">전체공지</a></li>
-                    <li><a href="BitCamp.html">비트캠프</a></li>
-                    <li><a>멀티캠퍼스</a></li>
-                    <li><a>쌍용IT</a></li>
-                    <li><a>GSIT</a></li>
+                <ul id="board_ul">
+                    <li id="board_li"><a id="board_menu_a" href="Board.html">전체공지</a></li>
+                    <li id="board_li"><a id="board_menu_a" href="BitCamp.html">비트캠프</a></li>
+                    <li id="board_li"><a id="board_menu_a" href="MultiCampus.html">멀티캠퍼스</a></li>
+                    <li id="board_li"><a id="board_menu_a">쌍용IT</a></li>
                 </ul>
             </div>
             <div id="menu_right_bar"></div>
@@ -37,6 +44,7 @@
                                     <th class="board__column">제목</th>
                                     <th class="board__column">작성자</th>
                                     <th class="board__column">작성일</th>
+                                    <th class="board__column">학원</th>
                                     <th class="board__column">조회</th>
                                 </tr>
                             </thead>
@@ -53,5 +61,6 @@
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="loadBoard.js"></script>
+    <script type="text/javascript" src="/javascript/loadBoard.js"></script>
+    <script type="text/javascript" src="/javascript/router.js"></script>
 </html>

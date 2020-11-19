@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Board</title>
+        <title>Board Modify</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
         <link rel="stylesheet" type="text/css" href="css/boardUpdate.css">
@@ -10,10 +10,11 @@
             <h1 onclick="gotoHome()">국비지원</h1>
         </div>
         <div id="menu_area">
-            <ul>
-                <li style="margin-bottom: 10px;"><a>비트캠프</a></li>
-                <li style="margin-bottom: 10px;"><a>삼성멀티캠퍼스</a></li>
-                <li style="margin-bottom: 10px;"><a>SW아카데미</a></li>
+            <ul id="board_ul">
+                <li id="board_li"><a id="board_menu_a" href="Board.html">전체공지</a></li>
+                <li id="board_li"><a id="board_menu_a" href="BitCamp.html">비트캠프</a></li>
+                <li id="board_li"><a id="board_menu_a" href="MultiCampus.html">멀티캠퍼스</a></li>
+                <li id="board_li"><a id="board_menu_a">쌍용IT</a></li>
             </ul>
         </div>
         <div id="menu_right_bar"></div>
@@ -56,7 +57,7 @@
                         class="upd_editor__content-input"
                         id="upd_editor-content-input"
                         placeholder="내용"
-                        size="80"
+                        size="60"
                         />
                     </div>
                     <div id="upd_btn_area">
@@ -66,7 +67,7 @@
                 </form>
             </div>
         </div>
-        <script type="text/javascript" src="updateBoard.js"></script>
-        <script type="text/javascript" src="router.js"></script>
+        <script type="text/javascript" src="/javascript/updateBoard.js"></script>
+        <script type="text/javascript" src="/javascript/router.js"></script>
     </body>
 </html>

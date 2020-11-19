@@ -20,7 +20,7 @@ function logIn() {
         if (pw_splice === password) {
             alert('login success !!');
 
-            location.replace("http://localhost:5500/Board.html");
+            location.replace("http://localhost:5500/Home.html");
         } else {
             alert('비밀번호가 일치하지 않습니다.')
         }
