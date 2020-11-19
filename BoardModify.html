@@ -4,8 +4,17 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/board.css">
         <link rel="stylesheet" type="text/css" href="css/boardUpdate.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </head>
     <body>
+        <div id="top_menu_area">
+            <ul id="home_ul">
+                <li id="home_li"><a class="active" href="#home"><img src="/img/logo.png" style="width: 80px; margin-right: 20px;"/></a></li>
+                <li id="home_li"><a class="active" href="Home.html">Home</a></li>
+                <li id="home_li"><a href="Board.html">Board</a></li>
+                <a id="logout_btn" onclick="logout()">로그아웃</a>
+            </ul>
+        </div>
         <div id="title_area">
             <h1 onclick="gotoHome()">국비지원</h1>
         </div>
@@ -14,7 +23,7 @@
                 <li id="board_li"><a id="board_menu_a" href="Board.html">전체공지</a></li>
                 <li id="board_li"><a id="board_menu_a" href="BitCamp.html">비트캠프</a></li>
                 <li id="board_li"><a id="board_menu_a" href="MultiCampus.html">멀티캠퍼스</a></li>
-                <li id="board_li"><a id="board_menu_a">쌍용IT</a></li>
+                <li id="board_li"><a id="board_menu_a">SW아카데미</a></li>
             </ul>
         </div>
         <div id="menu_right_bar"></div>
@@ -22,16 +31,6 @@
             <div class="editor__container" id="contents_create_area">
                 <form action="#" class="editor__form" id="upd_editor-form">
                     <div id="input_top_area">
-                        <div id="writer_area">
-                            <label>작성자: </label>
-                            <input
-                                type="text"
-                                class="upd_editor__writer-input"
-                                id="upd_editor-writer-input"
-                                placeholder="작성자"
-                                size=20
-                            />                    
-                        </div>
                         <div id="upd_cate_area">
                             <label>카테고리: </label>
                             <select id="hz">

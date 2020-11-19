@@ -10,6 +10,7 @@
 <body style="margin: 0px;">
     <div id="top_menu_area">
         <ul id="home_ul">
+            <li id="home_li"><a class="active" href="#home"><img src="/img/logo.png" style="width: 80px; margin-right: 20px;"/></a></li>
             <li id="home_li"><a class="active" href="Home.html">Home</a></li>
             <li id="home_li"><a href="Board.html">Board</a></li>
             <a id="logout_btn" onclick="logout()">로그아웃</a>
@@ -24,19 +25,19 @@
                 <li id="board_li"><a id="board_menu_a" href="Board.html">전체공지</a></li>
                 <li id="board_li"><a id="board_menu_a" href="BitCamp.html">비트캠프</a></li>
                 <li id="board_li"><a id="board_menu_a" href="MultiCampus.html">멀티캠퍼스</a></li>
-                <li id="board_li"><a id="board_menu_a">쌍용IT</a></li>
+                <li id="board_li"><a id="board_menu_a" href="SWAcademy.html">SW아카데미</a></li>
             </ul>
         </div>
         <div id="contents_area">
             <div id="contents_area">
-                <div id="contents_top_area">
-                    <h5 style="margin: 0px;">전체 게시글: 
+                <!-- <div id="contents_top_area">
+                    <h4 style="margin: 0px;">전체 게시글: 
                         <script>
-                            const storageSize = localStorage.length;
-                            document.write(storageSize)
+                                const lists = JSON.parse(localStorage.getItem('boardLists'));
+                                document.write(lists.length)
                         </script>
-                    </h5>
-                </div>
+                    </h4>
+                </div> -->
                 <div class="board__container" id="div_table_area">
                     <table class="board__table-head" border="1" id="table_area">
                         <thead class="board__titles" id="thead_area">

@@ -27,8 +27,6 @@ function emptyCheck() {
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
 
     if(!lists) {
-        console.log('nums: ' + nums)
-
         const tr = document.createElement('tr');
         tr.classList.add('board__content');
 
@@ -65,6 +63,24 @@ function showBoardLists() {
             newLists.push(list)
         }
     })
+
+    
+    if(newLists === "") {
+        alert(newLists)
+        const tr = document.createElement('tr');
+        tr.classList.add('board__content');
+
+        const tdNum = document.createElement('td');
+        tdNum.classList.add('board__content-column');
+        tdNum.colSpan = 6;
+        tdNum.style.textAlign = "center";
+        tdNum.textContent = "게시글이 없습니다.";
+
+        tr.appendChild(tdNum);
+
+        boardTableBody.appendChild(tr);
+
+    }
 
     newLists.forEach((list, index) => {
         if (index < 5) {

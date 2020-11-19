@@ -32,9 +32,8 @@ function emptyCheck() {
 
         const tdNum = document.createElement('td');
         tdNum.classList.add('board__content-column');
-        tdNum.colSpan = 6;
+        tdNum.colSpan = 5;
         tdNum.style.textAlign = "center";
-        tdNum.style.height = "40px";
         tdNum.textContent = "게시글이 없습니다.";
 
         tr.appendChild(tdNum);
@@ -57,7 +56,33 @@ function showBoardLists() {
     console.log('showBoardLists()')
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
 
-    lists.forEach((list, index) => {
+    const newLists = [];
+
+    lists.forEach(list => {
+        if (list.category === "SW아카데미") {
+            newLists.push(list)
+        }
+    })
+
+    
+    if(newLists === "") {
+        alert(newLists)
+        const tr = document.createElement('tr');
+        tr.classList.add('board__content');
+
+        const tdNum = document.createElement('td');
+        tdNum.classList.add('board__content-column');
+        tdNum.colSpan = 6;
+        tdNum.style.textAlign = "center";
+        tdNum.textContent = "게시글이 없습니다.";
+
+        tr.appendChild(tdNum);
+
+        boardTableBody.appendChild(tr);
+
+    }
+
+    newLists.forEach((list, index) => {
         if (index < 5) {
             const tr = document.createElement('tr');
             tr.classList.add('board__content');
@@ -137,7 +162,15 @@ function showBoardListsNewPage(pageIndex) {
     const lists = JSON.parse(localStorage.getItem(BOARDinputLIST_LS));
     const limitPage = pageIndex * 5;
 
-    lists.forEach((list, index) => {
+    const newLists = [];
+
+    lists.forEach(list => {
+        if (list.category === "SW아카데미") {
+            newLists.push(list)
+        }
+    })
+    
+    newLists.forEach((list, index) => {
         if (index >= limitPage && index < limitPage + 5) {
                         const tr = document.createElement('tr');
             tr.classList.add('board__content');
@@ -155,6 +188,8 @@ function showBoardListsNewPage(pageIndex) {
             const tdTitle = document.createElement('td');
             tdTitle.classList.add('board__content-column');
             tdTitle.textContent = list.title;
+            tdTitle.style.paddingTop = "15px"
+
 
             aTitle.appendChild(tdTitle);
 

@@ -16,7 +16,7 @@
 
 #menu_right_bar{
     width: 3px; 
-    height: 350px; 
+    height: 400px; 
     float: left; 
     background-color: gray; 
     margin-left: 15px;
@@ -24,7 +24,7 @@
 
 #menu_area {
     width: 160px;
-    height: 350px;
+    height: 400px;
     float: left;
     background-color: rgb(230, 230, 230);
 }

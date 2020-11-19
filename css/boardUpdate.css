@@ -3,7 +3,7 @@
     height: 60vh;
     border: 3px solid gray;
     border-radius: 2em;
-    margin: auto;
+    margin-left: 22%;
     padding: 30px;
 }
 
@@ -14,10 +14,6 @@
 #writer_area{
     float: left;
     margin-right: 200px;
-}
-
-#upd_cate_area{
-    margin-left: 100px;
 }
 
 #upd_title_intput_area{
