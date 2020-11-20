@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="./css/layout.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="container">
             <div class="top">
-                <img src="/img/logo_gsitm.jpg" width=200/>
+                <img src="./img/logo_gsitm.jpg" width=200/>
             </div>
-
             <div class="middle">
                 <div class="middle-left"> 
                     <div style="height: 100%; width: 100%;">
@@ -19,11 +18,11 @@
                             </div>
                             <div style="width: 100%; line-height: 80px;">
                                 <i class="fa fa-user-circle" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
-                                <input id="userId_login" name="username" type="text" placeholder="아이디"/>
+                                <input id="userId_login" name="username" type="text" placeholder="아이디" style="height: 30px;"/>
                             </div>
                             <div style="width: 100%; line-height: 80px;">
-                                <i class="fa fa-unlock-alt" aria-hidden="true" style="color:black; font-size:30px; margin-right: 10px;"></i>                            
-                                <input id="password_login" name="password" type="password" placeholder="비밀번호"/>
+                                <i class="fa fa-unlock-alt" aria-hidden="true" style="color:black; font-size:30px; margin-right: 20px;"></i>                            
+                                <input id="password_login" name="password" type="password" placeholder="비밀번호" style="height: 30px;"/>
                             </div>
                             <div style="width: 100%; line-height: 100px;">
                                 <button type="button" class="button button1" onclick="logIn()">Login</button>
@@ -54,14 +53,14 @@
                                 <input id="passwordCert_signIn" name="passwordCert" type="password" placeholder="비밀번호 확인"/>
                             </div>
                             <div style="width: 100%; line-height: 80px;">
-                                <button type="submit" class="button button2" onclick="signIn()">회원가입</button>
+                                <button type="button" class="button button2" onclick="signIn()">회원가입</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="/javascript/SignIn.js"></script>
-        <script type="text/javascript" src="/javascript/Login.js"></script>
+        <script type="text/javascript" src="./javascript/SignIn.js"></script>
+        <script type="text/javascript" src="./javascript/Login.js"></script>
     </body>
 </html>

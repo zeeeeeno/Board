@@ -19,8 +19,8 @@ function onTitleClick(e) {
 
     localStorage.setItem(clickBoardNum, contentsNum);
 
-    window.location.href = 'http://localhost:5500/BoardDetail.html';
-
+    // window.location.href = 'http://localhost:5500/BoardDetail.html';
+    window.location.replace("./BoardDetail.html");
 }
 
 function emptyCheck() {
@@ -33,7 +33,7 @@ function emptyCheck() {
         tr.classList.add('board__content');
 
         const tdNum = document.createElement('td');
-        tdNum.classList.add('board__content-column');
+        tdNum.classList.add('board_content-column');
         tdNum.colSpan = 5;
         tdNum.style.textAlign = "center";
         tdNum.textContent = "게시글이 없습니다.";
@@ -74,7 +74,7 @@ function showBoardLists() {
             tr.style.borderBottom = '1px solid gray';
 
             const tdNum = document.createElement('td');
-            tdNum.classList.add('board__content-column');
+            tdNum.classList.add('board_content-column');
             tdNum.textContent = list.num;
 
             const aTitle = document.createElement('a');
@@ -84,7 +84,7 @@ function showBoardLists() {
             const tdTitle = document.createElement('td');
             tdTitle.classList.add('board__content-column');
             tdTitle.textContent = list.title;
-            tdTitle.style.paddingTop = "15px"
+            tdTitle.style.padding = "15px"
 
             aTitle.appendChild(tdTitle);
 
@@ -148,7 +148,7 @@ function showBoardListsNewPage(pageIndex) {
 
     const newLists = [];
 
-    lists.forEach((list, index) => {
+    lists.forEach(list => {
         if (list.category === "비트캠프") {
             newLists.push(list)
         }
@@ -170,7 +170,7 @@ function showBoardListsNewPage(pageIndex) {
             aTitle.id = `link-to-content${index}`;
 
             const tdTitle = document.createElement('td');
-            tdTitle.classList.add('board__content-column');
+            tdTitle.classList.add('board_content-column');
             tdTitle.textContent = list.title;
             tdTitle.style.paddingTop = "15px"
 

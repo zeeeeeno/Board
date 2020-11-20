@@ -1,26 +1,31 @@
 function gotoHome() {
     window.location.reload();
-    window.location.replace("/Board.html");
+    window.location.replace("./Board.html");
+}
+
+function gotoMain() {
+    window.location.reload();
+    window.location.replace("./Home.html");
 }
 
 function gotoBitcamp() {
     window.location.reload();
-    window.location.replace("/BitCamp.html");
+    window.location.replace("./BitCamp.html");
 }
 
 function gotoContents() {
     window.location.reload();
-    window.location.replace("/Board.html");
+    window.location.replace("./Board.html");
 }
 
 function gotoModify() {
     window.location.reload();
-    window.location.replace("/BoardModify.html");
+    window.location.replace("./BoardModify.html");
 }
 
 function logout() {
     window.location.reload();
-    window.location.replace("/SignIn.html");
+    window.location.replace("./SignIn.html");
 }
 
 function gotoBitcampUrl() {

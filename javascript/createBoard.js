@@ -59,7 +59,7 @@ function onEditorFormSubmit(e) {
     writerInput.value = '';
     titleInput.focus();
     window.location.reload();
-    window.location.replace("/Board.html");
+    window.location.replace("./Board.html");
 }   
 
 function assignIndex() {

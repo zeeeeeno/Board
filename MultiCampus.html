@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multicampus Board</title>
-    <link rel="stylesheet" type="text/css" href="css/board.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/board.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
 </head>
 <body style="margin: 0px;">
     <div id="top_menu_area">
         <ul id="home_ul">
-            <li id="home_li"><a class="active" href="#home"><img src="/img/logo.png" style="width: 80px; margin-right: 20px;"/></a></li>
-            <li id="home_li"><a class="active" href="Home.html">Home</a></li>
+            <li id="home_li"><a class="active"><img src="./img/logo.png" onclick="gotoMain()"  style="width: 80px; margin-right: 20px;"/></a></li>
+            <li id="home_li"><a class="active" href="./Home.html">Home</a></li>
             <li id="home_li"><a href="Board.html">Board</a></li>
             <a id="logout_btn" onclick="logout()">로그아웃</a>
         </ul>
@@ -22,10 +22,10 @@
     <div id="body_area">
         <div id="menu_area">
             <ul id="board_ul">
-                <li id="board_li"><a id="board_menu_a" href="Board.html">전체공지</a></li>
-                <li id="board_li"><a id="board_menu_a" href="BitCamp.html">비트캠프</a></li>
-                <li id="board_li"><a id="board_menu_a" href="MultiCampus.html">멀티캠퍼스</a></li>
-                <li id="board_li"><a id="board_menu_a" href="SWAcademy.html">SW아카데미</a></li>
+                <li id="board_li"><a id="board_menu_a" href="./Board.html">전체공지</a></li>
+                <li id="board_li"><a id="board_menu_a" href="./BitCamp.html">비트캠프</a></li>
+                <li id="board_li"><a id="board_menu_a" href="./MultiCampus.html">멀티캠퍼스</a></li>
+                <li id="board_li"><a id="board_menu_a" href="./SWAcademy.html">SW아카데미</a></li>
             </ul>
         </div>
         <div id="contents_area">
@@ -39,7 +39,7 @@
                     </h5>
                 </div> -->
                 <div class="board__container" id="div_table_area">
-                    <table class="board__table-head" border="1" id="table_area">
+                    <table class="board__table-head" id="table_area">
                         <thead class="board__titles" id="thead_area">
                             <tr class="board__titles">
                                 <th class="board__column">번호</th>
@@ -62,6 +62,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/javascript/loadMultiBoard.js"></script>
+    <script type="text/javascript" src="./javascript/loadMultiBoard.js"></script>
+    <script type="text/javascript" src="./javascript/router.js"></script>
 </body>
 </html>

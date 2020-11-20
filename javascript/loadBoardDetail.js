@@ -115,7 +115,8 @@ function boardDelete() {
 
     localStorage.setItem(BOARDLIST_DETAIL, JSON.stringify(newLists));
 
-    window.location.href = 'http://localhost:5500/Board.html';
+    // window.location.href = 'http://localhost:5500/Board.html';
+    window.location.replace("./Board.html");
 }
 
 window.onload = function() {

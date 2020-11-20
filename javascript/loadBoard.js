@@ -19,8 +19,8 @@ function onTitleClick(e) {
 
     localStorage.setItem(clickBoardNum, contentsNum);
 
-    window.location.href = 'http://localhost:5500/BoardDetail.html';
-
+    // window.location.href = 'http://localhost:5500/BoardDetail.html';
+    window.location.replace("./BoardDetail.html");
 }
 
 function emptyCheck() {

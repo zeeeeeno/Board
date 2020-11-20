@@ -8,6 +8,9 @@ function logIn() {
     const password = userPassword_Login.value;
 
     const storage_ID = localStorage.getItem(id);
+    if(storage_ID === null || storage_ID === '') {
+        alert('존재하지 않는 아이디입니다.')
+    }
     const storage_PW = storage_ID.split("userPw");
 
     const pw_split = storage_PW[1];
@@ -19,8 +22,8 @@ function logIn() {
         console.log('id 존재')
         if (pw_splice === password) {
             alert('login success !!');
-
-            location.replace("http://localhost:5500/Home.html");
+            window.location.replace("./Home.html");
+            // location.replace("http://localhost:5500/Home.html");
         } else {
             alert('비밀번호가 일치하지 않습니다.')
         }

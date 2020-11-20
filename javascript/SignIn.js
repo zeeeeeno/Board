@@ -14,7 +14,9 @@ function signIn() {
 
     const exsitId = localStorage.getItem(id);
 
-    if (exsitId) {
+    if(exsitId === '' || password === '') {
+        alert('빈칸이 있어선 안됩니다.')
+    } else if (exsitId) {
         alert('이미 존재하는 아이디입니다.')
     } else if (password !== passwordCert) {
         alert('비밀번호가 일치하지 않습니다.')
@@ -48,8 +50,6 @@ function signIn() {
 
     userId.value = '';
     userName.value = '';
-    userId.value = '';
-    userId.value = '';
-
-    // window.location.reload();
+    userPassword.value = '';
+    userPasswordCert.value = '';
 }

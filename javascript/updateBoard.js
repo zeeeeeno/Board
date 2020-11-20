@@ -25,7 +25,9 @@ function updateBoard() {
 
     localStorage.setItem(BOARDLIST_UPD, JSON.stringify(lists));
 
-    location.replace("http://localhost:5500/BoardDetail.html");
+    // location.replace("http://localhost:5500/BoardDetail.html");
+    window.location.replace("./BoardDetail.html");
+
 
 }
 
