@@ -27,7 +27,5 @@ function updateBoard() {
 
     // location.replace("http://localhost:5500/BoardDetail.html");
     window.location.replace("./BoardDetail.html");
-
-
 }
 

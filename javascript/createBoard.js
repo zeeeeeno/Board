@@ -30,7 +30,7 @@ function onEditorFormSubmit(e) {
             author: `${author}`,
             category: `${category}`,
             date: `${date.getFullYear()}.${
-                    date.getMonth() + 1
+                    date.getMonth()+1
                 }.${date.getDate()}.`,
             views: `${views++}`,
             content: `${content}`,
@@ -44,7 +44,7 @@ function onEditorFormSubmit(e) {
             author: `${author}`,
             category: `${category}`,
             date: `${date.getFullYear()}.${
-            date.getMonth() + 1
+            date.getMonth()+1
         }.${
             date.getDate()}.`,
             views: `${views++}`,
