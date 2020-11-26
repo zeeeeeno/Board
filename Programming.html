@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #gnbNavBar {
+            background-color: rgb(65, 65, 65); 
+            width: 100%;
+            max-height: 50px;
+            text-align: center;
+        }
+        .gnbNavbarA {
+            text-decoration: none; 
+            color: white; 
+            vertical-align: middle; 
+            line-height: 40px;
+            margin: 25px;
+            font-size: small;
+        }
+        #logoLeaf {
+            color: white; 
+            vertical-align: middle;
+            max-height: 5px; 
+            margin: 20px; 
+            padding-bottom: 5px;
+        }
+        #lnbNavBar {
+            background-color: black; 
+            width: 100%; 
+            line-height: 50px; 
+            text-align: center;
+            animation: animationLnbNavBar 0.5s 1;
+            animation-direction: reverse;
+            position: relative;
+        }
+        @keyframes animationLnbNavBar {
+            0%   {background: black; left: 0px; top: 0px;}
+            100%  {background: black; left: 150px; top: 0px;}
+        }
+        #lnbNavBar ul {
+            margin: 0px; 
+            list-style: none;
+        }
+        #lnbNavBar li {
+            display: inline-block; 
+            vertical-align: text-top; 
+            padding-right: 60px; 
+            padding-left: 4px;
+        }
+        #lnbNavBar a {
+            display: block; 
+            position: relative;
+            text-align: center;
+            justify-content: center;
+        }
+        #lnbNavBar span {
+            color: white; 
+            display: block;
+            line-height: 40px;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <div id="gnbNavBar">
+        <a href="./ITEdu.html" class="gnbNavbarA">
+            <i class="far fa-moon" aria-hidden="true" style="color:#ffffff; font-size:20px; vertical-align: middle;
+            "></i>        
+        </a>                   
+        <a href="./Programming.html" class="gnbNavbarA">Programming</a>
+        <a href="./HackingSecurity.html" class="gnbNavbarA">Security</a>
+        <a href="#Programming" class="gnbNavbarA">Data Science</a>
+        <a href="#Cloud" class="gnbNavbarA">Creative</a>
+        <a href="#Network" class="gnbNavbarA">Work Skill</a>
+        <a href="#System" class="gnbNavbarA">Job Basis</a>
+        <a href="#Database" class="gnbNavbarA">Career</a>
+        <a href="#Search" class="gnbNavbarA">
+            <i class="fas fa-search" aria-hidden="true" style="color:#ffffff; font-size:20px; vertical-align: middle;
+            "></i>        
+        </a>
+        <a href="#Myapage" class="gnbNavbarA">
+            <i class="fas fa-shopping-bag" aria-hidden="true" style="color:#ffffff; font-size:20px; vertical-align: middle;
+            "></i>        
+        </a>      
+    </div>
+    <div style="background-color: black;">
+        <div id="lnbNavBar">
+            <ul>
+                <li>
+                    <a>
+                        <i class="fas fa-desktop" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block; margin: 0px auto;"></i>
+                        <span>Web</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-mobile" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block;"></i>
+                        <span>Mobile</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-gamepad" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block;"></i>
+                        <span>Game</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fab fa-java" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block;"></i>
+                        <span>PL</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-brain" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block;"></i>
+                        <span>Algorithm</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fab fa-react" aria-hidden="true" style="margin: 0 auto; color:#ffffff; font-size:40px; display: block;"></i>
+                        <span>Framework</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
